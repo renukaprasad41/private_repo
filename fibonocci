@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAX_NODES 1000 // Change this value based on the maximum number of nodes
+
+int parent[MAX_NODES];
+int rank[MAX_NODES];
+
+// Function to initialize the DSU data structure
+void initialize(int n) {
+    for (int i = 1; i <= n; i++) {
+        parent[i] = i;
+        rank[i] = 0;
+    }
+}
+
+// Function to find the representative of a set using path compression
+int find(int x) {
+    if (x != parent[x]) {
+        parent[x] = find(parent[x]);
+    }
+    return parent[x];
+}
+
+// Function to perform union of two sets using rank to optimize the union operation
+void unionSets(int x, int y) {
+    int rootX = find(x);
+    int rootY = find(y);
+
+    if (rootX != rootY) {
+        if (rank[rootX] < rank[rootY]) {
+            parent[root…
+[09:13, 10/01/2024] +91 72044 64668: #include<stdio.h>
+int fib(int n) {
+    if (n <= 1)
+        return n;
+    else
+        return fib(n - 1) + fib(n - 2);
+}
+int main() {
+    int n = 8;
+    printf("Fibonacci(%d) using recursion = %d\n", n, fib(n));
+    return 0;
+}
