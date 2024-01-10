@@ -1,0 +1,7 @@
+disjoint_set_union:it is data structure that provides an efficent way to perform two main operations on the collection of disjoint set
+1)merging two sets
+2)determining whether two elements part of the same set
+it is particularly used for solving problems involving connected components such as graphic theory and image segmentation
+A={1,2,3,4,5}
+b={6,7,8}
+here A and B are two disjoint set
